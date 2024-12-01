@@ -1,0 +1,13 @@
+var 
+	s,N,ld :entiers  
+Debut 
+	s <-- 0 
+	afficher ("nombre ??")
+	lire (N)
+	tant que N>0 faire 
+		ld <-- N mod 10 
+		s = s + ld
+		N <-- N div 10
+	fin_tant_que
+	 afficher ( s ) 
+fin 

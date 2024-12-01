@@ -1,0 +1,21 @@
+var 
+   Pa,Im,N,ld : entiers 
+   
+  debut 
+  	Pa <-- 0
+  	Im <-- 0
+  
+  	afficher ("num")
+  	lire (N)
+  	tant que N > 0 faire 
+  		ld <-- N mod 10
+  		Si ld mod 2 = 0 alors 
+  			Pa = Pa + 1
+  		fin_SI 					//could be sinon
+  		Si ld mod 2 = 1 alors 
+  			Im = Im + 1 
+  		fin_Si
+  		N <-- N div 10
+  	fin_Tant_que 
+  		afficher ("les pairs:",Pa,"les Impairs:",Im)
+  fin

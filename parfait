@@ -1,0 +1,23 @@
+var
+	a,x :entiers
+	P : chaine  de caracter 
+
+debut 
+	x <-- 0
+	afficher ("entre num")
+	lire (a) 
+	pour i de 1 a (a-1) faire 
+		Si a mod i = 0 alors 			// or I could store {ex <--a mod i}   
+		x <-- x + (a mod i = 0)
+		fin_Si
+	fin_pour
+	Si x = a alors 
+		P <-- "perfect "
+	sinon 
+		p <-- "imperfect"
+	Fin_Si
+	
+	afficher ("a, est :", P)
+Fin
+		
+	

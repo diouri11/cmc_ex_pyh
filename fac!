@@ -1,0 +1,29 @@
+var 
+	a,i, S ,ld, f : entiers 
+	
+debut 
+	afficher ("??")
+	lire (a)
+	
+	f <-- 1
+	S <-- 0
+	
+	tant que a > 0 faire 
+		ld <-- a mod 10 
+		
+		Si ld = 0 alors 
+			f <-- 1 
+		Fin_Si
+		
+		
+		pour i de 1 a ld faire					
+			f <-- f * i 
+		Fin_pour
+		
+		S = S + f 
+		a <-- a div 10
+	Fin_tant_que 
+	
+	afficher (S)
+
+Fin    	 

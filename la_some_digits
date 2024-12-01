@@ -1,0 +1,14 @@
+							sum_
+var 
+	x,s,i,a : entiers
+debut
+
+	s <-- 0
+	lire (x)
+	while x > 0 faire 
+		a <-- x mod 10 
+		s <-- s + a
+	fin_tant_que
+	afficher("la some est :",x)
+end 
+	

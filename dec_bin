@@ -1,0 +1,18 @@
+var 
+	rev ,bin, D, S, i
+
+debut
+	afficher ("entre le nombre dec")
+	lire (D)
+	tant que D > 0 faire 
+		ld <-- D mod 2 
+		S <-- s*10 + ld
+	 	D <-- D div 2 
+	fin_tant_que
+	ld <-- 0
+	tant que S > 0 faire 
+		ld <-- S mod 10
+		bin <-- bin*10 + ld
+		S <-- S div 10 
+	fin_tant_que
+fin
