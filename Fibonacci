@@ -1,0 +1,15 @@
+var 
+	x,a,i,N : entiers
+	
+debut
+	b <-- 0
+	c <-- 0  
+	
+	lire (N)
+	
+	pour i de 0 a N faire 
+		afficher (a,b,c)
+		a <-- b
+		b <-- c
+	Fin_Pour
+Fin

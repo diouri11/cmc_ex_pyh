@@ -1,0 +1,13 @@
+var 
+	x,i,j 
+
+debut 
+	lire (x)
+	pour i de 1 a x faire 
+		afficher (i)
+		pour j de 1 a (x-1) faire 
+		Aafficher (j) 
+		Fin_Pour
+		afficher ("\n")
+	Fin_Pour
+fin	 
