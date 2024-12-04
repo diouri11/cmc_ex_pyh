@@ -1,0 +1,113 @@
+			rat
+var 
+	A,B,C,D; reel	
+	x: entier 
+	Q: char
+fonction err(B; entier , D; entier,) ; reel
+	si B = 0 et D = 0 alors
+		afficher ("Error ") 
+		return 0 ;
+	Fin_Si
+
+fonction addition(A; Reel, B; Reel  , D;Reel , C; Reel) ; reel
+	err(A,B,C,D)
+	
+	A <-- ((A*D)+(B*C))/B*D
+	
+	Return A
+FinFonction
+
+fonction sous(A; Reel, B; Reel  , D;Reel , C; Reel) ; reel
+	
+	err(A,B,C,D)
+	
+	A <-- ((A*D)-(B*C))/B*D
+	
+	Return A
+Fin_Fonction 
+
+fonction prod(A; Reel, B; Reel  , D;Reel , C; Reel) ; reel
+	
+	err(A,B,C,D)
+	
+	A <-- (A*C)/(B*D)
+	
+	RETURN A
+Fin_Fonction 
+
+
+Fonction comparison(A; Reel, B; Reel  , D;Reel , C; Reel) ; reel
+
+	err(A,B,C,D)
+	
+	SI A/B > C/D alors 
+		return  A/B
+	Sinon 
+		return C/D
+	FINSi 
+Fin_fonction 
+
+procedure aff()
+	afficher ("enter le choix ")
+	afficher ("1- addition")
+	afficher ("2- sous")
+	afficher ("3- produit ")
+	afficher ("4- comparision ")
+	afficher ("")
+fin_porc
+
+fonction cas( A;reel ,B ; reel, C ; reel ,D;reel) ;reel 
+	var x: entier
+	
+	debut
+			afficher ("entre le rat A/B")
+			LIRE (A,B)
+			afficher ("entre le rat C/D")
+			LIRE (C/D)
+	repeter
+		aff()
+		afficher (" entrez le chox ") 
+		lire (x)
+		
+		afficher ("entre le rat A/B")
+			LIRE (A,B)
+			afficher ("entre le rat C/D")
+			LIRE (C/D)
+	jusqu'a x > 0 et x < 5 
+	
+	en cas x de 
+		1 : afficher(somme(A,B,C,D)
+		2 : AFFICHER (sous(A,B,C,D)
+		3 : afficher (produit(A,B,C,D)
+		4 : afficher (comparison(A,B,C,D)
+	FIN_CAS
+	return x
+	
+debut
+		cas											//afficher ("entre le rat A/B")
+													//LIRE (A,B)
+													//afficher ("entre le rat C/D")
+													//LIRE (C/D)
+													// err (B,D) 
+
+	
+	
+	repeter
+		afficher ("si vous vouler repeter le programe press Q")
+		lire (Q)
+		
+		Si Q # 0 alors
+			afficher ("entre le rat A/B")
+			LIRE (A,B)
+			afficher ("entre le rat C/D")
+			LIRE (C/D)
+		
+		cas(A,B,C,D)
+		
+	
+	jusqu'a Q="Q"
+Fin		
+	
+	
+	
+
