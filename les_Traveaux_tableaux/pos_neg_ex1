@@ -1,0 +1,34 @@
+				pos_neg
+var 
+	T[1-20] :tableau d'entier
+	TP[] :tableau d'entier 
+	TNn[1-20] :tableau d'entier
+	X,p,n : entier  
+debut 
+	n <-- 0
+	p <-- 0 
+	pour i de 1 a 20 faire
+	 
+	afficher ("entre le valeur de tableau",i)
+	lire (T[i])
+	
+	si T mod 2 = 0 alors
+		p = p + 1
+		redim tableau T [1 ; p]
+		TP[c] <-- T[i]
+	Sinon 
+		n = n + 1
+		Redim TN[n]
+		TN[n] <-- T[i]	
+	Fin_Si
+	afficher ("positive : \n")	
+	POUR i de 1 a p faire 
+	
+		Afficher (TP[i])
+	Fin_Pour
+	afficher ("Negative : \n")	
+	POUR i de 1 a n faire 
+	
+		Afficher (TN[i])
+	Fin_Pour  
+fiN

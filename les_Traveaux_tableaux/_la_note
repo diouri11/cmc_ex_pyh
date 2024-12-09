@@ -1,0 +1,59 @@
+					les_100_note
+var 
+	
+	min,max,moy:reel 
+	Tab ;tableau d'entier 
+	
+	
+	
+Fonction min_tab( T; tableau d'reel ,) ; reel
+
+	min <-- T[1]  
+	Pour i de 1 a 100 faire 
+	si min > T[i] alors 
+		min <-- T[i]
+	Fin_Si 
+
+Return min 
+Fin_Fonc
+
+
+Fonction max_tab( T; tableau d'entier,) ; reel
+
+	max <-- T[1]  
+	Pour i de 1 a 100 faire 
+	si max < T[i] alors 
+		max <-- T[i]
+	Fin_Si 
+
+Return max 
+Fin_Fonc
+
+fonction moy_tab(T ;Tableux d'reel ) reel 
+	moy <-- 0
+	
+	pour i de 1 a 100 faire 
+	moy <-- moy + T[i]
+	Fin_Pour
+
+	moy <-- moy / 100 
+
+Return moy 
+
+Fin_fonction 
+
+Fonction exit(T ;Tableux d'reel, A;reel  ) bouleen
+	
+	pour i de 1 a 100 faire 
+		si T[i] = A alore 
+			B <-- True 
+			break;
+		sinon 
+	 		B <-- false
+	 	Fin_Si
+	Fin_Pour
+
+return B
+Fin_Fonction
+
+

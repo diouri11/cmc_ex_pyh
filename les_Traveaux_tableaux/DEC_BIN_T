@@ -1,0 +1,22 @@
+				 DEC_BIN_T 
+var
+	bin [] : tableau d'entier
+	A,B,i : entier 
+	
+
+
+debut 
+	lire (A)
+
+	tantque A div 10 > 0 alors
+		bin[i] <-- A mode 2
+		A <-- A div 10 
+		i <-- i + 1
+	
+	Fin_Tant_Que
+
+	pour B de 1 a i 
+	 	Afficher (bin[B])
+	Fin_Pour
+
+Fin

@@ -1,0 +1,42 @@
+				shtroumpf
+
+
+var 		
+	Tab[],tf[] : tableau d'entier
+	T[] :tableau d'entier 
+	i,j,  : entier 	
+	
+
+
+
+fontion remplir_tab (var Tab ;tableau d'entier ); entier 
+	var i j , entier 
+	 
+	afficher ("tableau d'taille ??")
+	lire (A)
+	Redim TAB[A]
+	Pour i de 1 a A faire 
+		lire Tab[i]
+	REturn A
+	Fin_Fonction 
+	
+	
+
+
+debut 
+	c <-- 0
+	
+	A <-- remplir_tab (T)
+	B <-- remplir_tab (Tab)
+
+	Redim [1 ; A*B]
+
+	Pour i de 1 a A faire
+	 
+		Pour j de 1 a B faire  
+			c = c + 1
+			Tf[c] <-- T[i]* Tab[j]
+		Fin_Pour
+		
+	Fin_pour
+Fin 
