@@ -23,7 +23,10 @@ procedure menu()
 	Fin_Pour 
 Fin_proc
 
-
+proc gest_disp(var dispo, i ,  hist_comm )
+	disp[i] <-- dispo[i] - 1 
+	
+Fin_proc
 
  precdure historique(var hist_name, var hist_comm)	
  	i <-- 1
@@ -49,6 +52,29 @@ Fin_proc
 			
 			j <-- j + 1
 			Jusqu'a A = 0		
+		
+		gest_disp(var dispo, i ,  hist_comm )
 		i <-- i + 1
 		jusqu'a (B = "FIN") ou (B = "fin")
+
 Fin_Proc
+
+
+proc gest_disp(var dispo, i ,  hist_comm )
+	disp[i] <-- dispo[i] - 1 
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
