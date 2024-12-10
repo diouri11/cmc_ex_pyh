@@ -4,7 +4,8 @@ var
 	menu [1 , 5] ; tableux de chaine de caracter
 	hist_name[]  ; tableux de chaine de caracter  
 	hist_comm[][]; tableux de entier 
-	i,j,N,A ; entier
+	hist_table
+	i,j,N,A,Quant ; entier
 	
  
  
@@ -18,6 +19,10 @@ var
 
 procedure menu()
 	Pour i de 1 a 5 faire 
+		SI dispo[i] = 0  
+			continue;
+		Fin_Si
+		
 		afficher (i , menu(i) , "prix :" , prix[i], "dispoible:" , dispo[i] );
 		afficher ("\n")
 	Fin_Pour 
@@ -60,12 +65,12 @@ precdure historique(var hist_name, var hist_comm , var his_table dispo , i)
  	
 	j <-- 1 						  
  	
- 		afficher ("entre le nom de client, si vous terminez entrez --FIN--")
+ 		afficher ("entre le nom de client.")
 		lire (hist_name[i])
 		
 		
 		afficher ("num table") 
-		lire (hist_comm[i])
+		lire (hist_table[i])
 		
 		
 		repeter
@@ -75,17 +80,25 @@ precdure historique(var hist_name, var hist_comm , var his_table dispo , i)
 			
 			si A = 0 alors 	
 				break;											
+			
+			Sinon 
+				afficher("Quantite ")
+				lire (Quant)
+				
+			
 			Fin_si
 			
-			
-			redim hist_comm[i][j]
-			hist_comm[j][i] <-- A			// meme coll		
-			
-			
-			gest_disp(var dispo ; A , dispo)
+			Pour z de 1 a quant faire
+				redim hist_comm[i][j]
+				hist_comm[j][i] <-- A			// meme coll		
 			
 			
-			j <-- j + 1
+				gest_disp(var dispo ; A , dispo)
+			
+			
+				j <-- j + 1
+			Fin_pour
+			
 			Jusqu'a A = 0		
 		
 		i = i + 1
