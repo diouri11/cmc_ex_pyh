@@ -1,25 +1,54 @@
-					resturant
-					
 var
-	dis_pizza, dis_Burger, dis_Salade, dis_Dessert, dis_Boisson ; entier 
+	dispo[1 , 5] ; tableux d'entier 
+	prix [1 , 5] ; tableux d'entier
+	menu [1 , 5] ; tableux de chaine de caracter
+	hist_name[]  ; tableux de chaine de caracter  
+	hist_comm[][]; tableux de entier 
+	i,j,N,A ; entier
 	
-	
-
-const
-	prix_Pizza   <-- 50
-	prix_Burger  <-- 35 
-	prix_Salade  <-- 20
-	prix_Dessert <-- 15 
-	prix_Boisson <-- 10
+ 
+ 
+ //-- menu [Pizza , Burger , Salade , Dessret ,Boisson]
+ //-- prix [50 , 35 , 20 , 15 , 10]
+ //-- dispo [10 , 8 , 15 , 20 , 30]
+ 
 
 
 
-porcedure menu(dis_pizza, dis_Burger, dis_Salade, dis_Dessert, dis_Boisson )
-	afficher ("1<-- Pizza  ", prix_Pizza , "dispo ", dis_pizza) 
-	afficher ("2<-- Burger ", prix_Burger, "dispo ", dis_Burger)
-	afficher ("3<-- Salade ", prix_Salade ,"dispo ", dis_Salade)  
-	afficher ("4<-- Dessert", prix_Dessert,"dispo ", dis_Dessert)
-	afficher ("5<-- Boisson", prix_Boisson,"dispo ", dis_Boisson) 
-Fin_proc 
 
-structure 
+procedure menu()
+	Pour i de 1 a 5 faire 
+		afficher (i , menu(i) , "prix :" , prix[i], "dispoible:" , dispo[i] );
+		afficher ("\n")
+	Fin_Pour 
+Fin_proc
+
+
+
+ precdure historique(var hist_name, var hist_comm)	
+ 	i <-- 1
+	j <-- 1 
+ 	repeter 
+ 		afficher ("entre le cnom de client, si vous terminez entrez --FIN--")
+		lire (B)
+		si (B = "FIN") ou (B = "fin")
+			break; 
+		Fin_Si
+		
+		hist_name[i] <-- B
+
+		repeter
+			afficher ("les commandes   , si vous avez terminez entrez -- 0 --  " )
+			lire (A)				
+			si A = 0 alors 	
+				break;											
+			Fin_si
+			
+			redim hist_comm[i][j]
+			hist_comm[i][j] <-- A			
+			
+			j <-- j + 1
+			Jusqu'a A = 0		
+		i <-- i + 1
+		jusqu'a (B = "FIN") ou (B = "fin")
+Fin_Proc
