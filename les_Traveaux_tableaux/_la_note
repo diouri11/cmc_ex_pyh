@@ -2,9 +2,19 @@
 var 
 	
 	min,max,moy:reel 
-	Tab ;tableau d'entier 
+	Tab ;tableau d'reel
+	T_moy ; tableau d'reel 
+	i,c,j; entier 
 	
 	
+procedure remplir_tab (var Tab ;tableau d'entier )
+	 
+	
+	Pour i de 1 a 100 faire
+		afficher ("la note ",i, ":")
+		lire (Tab[i])
+
+Fin_Proc 
 	
 Fonction min_tab( T; tableau d'reel ,) ; reel
 
@@ -42,7 +52,10 @@ Return moy
 
 Fin_fonction 
 
-Fonction exit(T ;Tableux d'reel, A;reel  ) bouleen
+Fonction exit(T ;Tableux d'reel,) bouleen
+
+	Afficher ("la note ??")
+	Lire (A)
 	
 	pour i de 1 a 100 faire 
 		si T[i] = A alore 
@@ -54,6 +67,84 @@ Fonction exit(T ;Tableux d'reel, A;reel  ) bouleen
 	Fin_Pour
 
 return B
+
+Fin_Fonction 
+
+
+fonction occur(T ;tableau d' reel ,) entier 
+	c <-- 0
+	
+	afficher ("note d'occur ?")
+	lire (A)
+	
+	Pour i de 1 a 100 faire 
+	
+	si A = T[i] alors 
+		c = c + 1
+	Fin_Si
+	
+	Fin_Pour
+			
+Return c
+	
 Fin_Fonction
 
 
+
+
+
+
+
+
+
+Debut 
+	remplir_tab(Tab)
+	
+	moy <-- moy_tab(tab)
+	
+		afficher ("moy:",moy)
+		
+	min <-- min_tab(Tab)
+		
+		afficher ("min est",min)
+	
+	max <-- max_tab(Tab)	
+	
+		afficher ("1st note ",max) 
+	
+	
+	Si exist_tab(Tab) alors 
+	
+		afficher ("La note exist")
+	
+	Sinon 
+		afficher ("la note non exist")
+	
+		
+				
+	afficher (occur_tab(Tab))
+	
+	pour j de 1 a 100 faire
+		Si Tab[i] > moy alors
+			redim T_moy[j]
+			T_moy <-- Tab[i]
+		Fin_Si
+	Fin_Pour 			
+	Pour j de 1 a 100 faire 
+		afficher T_moy[j] 
+	Fin_pour 
+Fin
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
