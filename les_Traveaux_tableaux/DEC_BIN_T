@@ -7,8 +7,9 @@ var
 
 debut 
 	lire (A)
-
+	bin <-- 1
 	tantque A div 10 > 0 alors
+		redim bin[i]
 		bin[i] <-- A mode 2
 		A <-- A div 10 
 		i <-- i + 1
