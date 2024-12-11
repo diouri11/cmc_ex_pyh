@@ -61,7 +61,7 @@ Fin_proc
 
 
 
-precdure historique(var hist_name, var hist_comm , var his_table dispo , i) 	
+precdure historique(var hist_name, var hist_comm , var his_table dispo , var i) 	
  	
 	j <-- 1 						  
  	
@@ -105,7 +105,17 @@ precdure historique(var hist_name, var hist_comm , var his_table dispo , i)
 		  
 
 Fin_Proc
- 
+
+fonction payment(hist_comm , prix , hist_name , hist_table, i ), reel 
+var 
+	Total ;     reel 
+	    z ;	    entier 
+	
+debut	
+	afficher (hist_name , "table:" , hist_table , "\n" )
+	pour z de 1 a j faire
+		afficher (hist_comm[z][i])     		// ------outpout number of plate
+		
 
 
 
